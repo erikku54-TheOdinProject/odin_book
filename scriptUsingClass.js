@@ -52,41 +52,70 @@ function addNewBook() {
 
 //---------set Book class & Library--------
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read === undefined ? false : read;
-}
+// function Book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read === undefined ? false : read;
+// }
 
-Book.prototype.info = function () {
+// Book.prototype.info = function () {
 
-    let s = '';
+//     let s = '';
 
-    if (this.read == true) {
-        s = 'have already read';
-    } else {
-        s = 'not read yet';
+//     if (this.read == true) {
+//         s = 'have already read';
+//     } else {
+//         s = 'not read yet';
+//     }
+
+//     return `${this.title} by ${this.author}, ${this.pages} pages, ${s}`;
+// }
+
+// Book.prototype.changeReadState = function () {
+//     this.read = !this.read;
+
+// }
+
+class Book {
+
+    constructor(title, author, pages, read) {
+
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read === undefined ? false : read;
     }
 
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${s}`;
-}
+    info() {
 
-Book.prototype.changeReadState = function () {
-    this.read = !this.read;
+        let s = '';
 
+        if (this.read == true) {
+            s = 'have already read';
+        } else {
+            s = 'not read yet';
+        }
+
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${s}`;
+    }
+
+    changeReadState(){
+
+        this.read = !this.read;
+    }
 }
 
 
 let myLibrary = [];
 
 function addBookToLibrary(book) {
-    let l=myLibrary.push(book);
-    addCard(book,l-1);  //should pass index
+    let l = myLibrary.push(book);
+    addCard(book, l - 1);  //should pass index
 }
 
 
-function addCard(book,index) {
+function addCard(book, index) {
 
     const bookshelf = document.querySelector('div.bookshelf');
 
@@ -100,7 +129,7 @@ function addCard(book,index) {
     const pauthor = document.createElement('p');
     pauthor.innerText = book.author;
     const ppages = document.createElement('p');
-    ppages.innerText = book.pages+' pages';
+    ppages.innerText = book.pages + ' pages';
     const pread = document.createElement('p');
     pread.innerText = book.read ? 'have read' : 'not read yet';
     // pread.style.cssText='color:green; background-color: lightgray;'
@@ -146,7 +175,7 @@ function addCard(book,index) {
         //         break;
         //     }
         // }
-        let matchedIndex=parseInt(targetcard.getAttribute('data-index'));
+        let matchedIndex = parseInt(targetcard.getAttribute('data-index'));
 
         //remove the book
         bookshelf.removeChild(card);
