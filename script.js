@@ -100,7 +100,7 @@ function addCard(book,index) {
     const pauthor = document.createElement('p');
     pauthor.innerText = book.author;
     const ppages = document.createElement('p');
-    ppages.innerText = book.pages;
+    ppages.innerText = book.pages+' pages';
     const pread = document.createElement('p');
     pread.innerText = book.read ? 'have read' : 'not read yet';
     // pread.style.cssText='color:green; background-color: lightgray;'
