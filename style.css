@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+div.btn-container{
+    padding: 20px 50px 0 50px;
+}
+
+
+
+div.bookshelf{
+
+    padding: 30px 50px;
+
+    display: flex;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 50px;
+}
+
+
+
+/* ---------about Card ----------*/
+
+
+div.card{
+
+    position: relative;
+
+    flex: 0 1 220px;
+    height: 150px;
+
+    border: 2px solid lightblue;
+    border-radius: 15px;
+
+    padding: 20px;
+}
+
+button.btnDel{
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    /* border-radius: 6px; */
+
+    padding: 1px;
+
+    width: 20px;
+    height: 20px;
+
+    text-align: center;
+}
+
+
+
+/*-------- about dialog ------*/
+
+
+p.title{
+
+    height: 40px;
+
+    font-weight: 800;
+    color:blue;
+}
+
+dialog{
+
+    width: 300px;
+
+    position: fixed;
+    margin:auto;
+
+    border: none;
+    box-shadow: 0 2px 6px #ccc;
+    border-radius: 10px;
+}
+
+h3.dialog{
+    color:blue;
+}
+
+span.dialog{
+
+    display: inline-block;
+
+    width:60px;
+    text-align: end;
+}
+
+input.dialog{
+    width: 150px;
+}
+
+button.dialog{
+    width: 60px;
+}

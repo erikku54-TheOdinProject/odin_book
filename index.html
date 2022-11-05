@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="btn-container">
+        <button id="showDialog">Add new</button>
+    </div>
+
+
+    <div class="bookshelf">
+
+
+    </div>
+
+    <dialog id="newBookInfo">
+
+        <h3 class="dialog">ADD NEW BOOK</h3>
+
+        <br>
+
+        <div class="dialog">
+            <span class="dialog">Title:</span>
+            <input class="dialog" type="text" name="title" value="title">
+        </div>
+
+        <br>
+
+        <div class="dialog">
+            <span class="dialog">author:</span>
+            <input class="dialog" type="text" name="author" value="author">
+        </div>
+
+        <br>
+
+        <div class="dialog">
+            <span class="dialog">pages:</span>
+            <input class="dialog" type="text" name="pages" value="page">
+        </div>
+
+        <br>
+
+        <div class="dialog">
+            <span class="dialog">read:</span>
+            <select name="read" id="read">
+                <option value='false'>unread</option>
+                <option value='true'>have read</option>
+            </select>
+        </div>
+
+        <br>
+
+        <button class="dialog" id="addBook">Add</button>
+        <button class="dialog" id="cancel">Cancel</button>
+
+    </dialog>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
